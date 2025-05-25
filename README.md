@@ -1,4 +1,4 @@
-EquationBalancer
+#EquationBalancer
 
 Программа для балансировки химических уравнений.
 

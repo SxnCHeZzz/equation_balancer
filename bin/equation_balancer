@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require_relative "../lib/equation_balancer"
+
+
+if ARGV.empty?
+  puts "Usage: equation_balancer \"H2 + O2 -> H2O\""
+  exit 1
+end
+
+begin
+  equation = ARGV[0]
+  result = EquationBalancer.balance(equation)
+  puts result
+rescue => e
+  puts "Error: #{e.message}"
+  exit 1
+end

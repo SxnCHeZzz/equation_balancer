@@ -1,43 +1,39 @@
-# EquationBalancer
+#EquationBalancer
 
-A Ruby gem for balancing chemical equations.
+Программа для балансировки химических уравнений.
 
-## Installation
+---
 
-Add this line to your application's Gemfile:
+##О проекте
+Этот проект реализует балансировку химических уравнений — автоматический подбор коэффициентов для правильного уравнивания атомов в левой и правой части уравнения.
 
-```ruby
-gem 'equation_balancer'
-And then execute:
+---
 
+##Автор
+Проект выполнен учеником группы ФИИТ 2.2 — Кашарным Александром.
+---
 
-$ bundle install
-Or install it yourself as:
+##Использование
+Запустите интерактивную консоль:
+```bash
 
+ruby bin/console
+```
+В интерактивной консоли введите уравнение, например:
 
-$ gem install equation_balancer
-Usage
-Balance a chemical equation by providing a string in the format "reactants -> products":
+```bash
+H2 + O2 -> H2O
+```
+Или запустите скрипт с уравнением в командной строке:
 
+```bash
+ruby bin/equation_balancer "H2 + O2 -> H2O"
+```
+---
+##Демонстрация
+Для демонстрации работы с набором готовых уравнений запустите:
 
-require 'equation_balancer'
-
-# Example
-result = EquationBalancer.balance('H2 + O2 -> H2O')
-puts result # Outputs: "2H2 + O2 -> 2H2O"
-
-Development
-After checking out the repo, run the following to set up the project:
-
-
-$ bundle install
-
-To run tests:
-
-$ rspec
-
-Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/SxnCHeZzz/equation_balancer.
-
-License
-The gem is available as open source under the terms of the MIT License.
+```bash
+ruby demo_predefined.rb
+```
+##Если возникнут вопросы или предложения — пишите!

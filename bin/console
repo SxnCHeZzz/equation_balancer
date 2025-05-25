@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require_relative "../lib/equation_balancer"
+
+
+puts "🔬 EquationBalancer Console"
+puts "Example: EquationBalancer.balance('H2 + O2 -> H2O')"
+puts "Enter equation (or 'exit' to quit):"
+
+loop do
+  print "> "
+  input = gets.chomp
+  break if input.strip.downcase == "exit"
+
+  begin
+    result = EquationBalancer.balance(input)
+    puts "✔ #{result}"
+  rescue => e
+    puts "Error: #{e.message}"
+  end
+end
